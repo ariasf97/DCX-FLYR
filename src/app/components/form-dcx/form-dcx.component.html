@@ -1,0 +1,52 @@
+<p-card header="DCX" class="w-full">
+  <form
+    class="flex justify-content-center flex-wrap gap-1"
+    [formGroup]="formDcx"
+  >
+    <p-iconField iconPosition="left">
+      <p-inputIcon>
+        <img
+          src="/assets/plane-1.svg"
+          class="custom-icon"
+          alt="avion despegando"
+        />
+      </p-inputIcon>
+      <input
+        type="text"
+        pInputText
+        placeholder="Origin"
+        formControlName="origin"
+      />
+    </p-iconField>
+
+    <p-iconField iconPosition="left">
+      <p-inputIcon>
+        <img
+          src="/assets/plane-2.svg"
+          class="custom-icon"
+          alt="avion despegando"
+        />
+      </p-inputIcon>
+      <input
+        type="text"
+        pInputText
+        placeholder="Destination"
+        formControlName="destination"
+      />
+    </p-iconField>
+
+    <p-selectButton
+      [options]="typeflight"
+      formControlName="typeflight"
+      optionLabel="label"
+      optionValue="value"
+    />
+    <p-dropdown
+      formControlName="selectCurrency"
+      [options]="currency"
+      optionLabel="name"
+      placeholder="Select your currency"
+    />
+    <p-button label="Search" icon="pi pi-search" iconPos="right" />
+  </form>
+</p-card>
