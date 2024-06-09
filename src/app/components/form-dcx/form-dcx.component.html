@@ -1,8 +1,17 @@
-<p-card header="DCX" class="w-full">
+<p-toast></p-toast>
+<p-card class="w-full">
   <form
     class="flex justify-content-center flex-wrap gap-1"
     [formGroup]="formDcx"
+    (ngSubmit)="search()"
   >
+    <img
+      src="assets/FLYR_LOGO_BLK_RGB.svg"
+      alt="flyr"
+      width="200px"
+      height="50px"
+      class="pr-5"
+    />
     <p-iconField iconPosition="left">
       <p-inputIcon>
         <img
@@ -47,6 +56,11 @@
       optionLabel="name"
       placeholder="Select your currency"
     />
-    <p-button label="Search" icon="pi pi-search" iconPos="right" />
+    <p-button
+      label="Search"
+      icon="pi pi-search"
+      iconPos="right"
+      type="submit"
+    />
   </form>
 </p-card>

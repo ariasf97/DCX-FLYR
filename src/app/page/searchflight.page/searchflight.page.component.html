@@ -1,2 +1,5 @@
-<app-form-dcx class="flex justify-content-start align-items-cente p-5" />
-<app-result-dcx class="flex justify-content-start align-items-cente p-5" />
+<app-form-dcx class="flex justify-content-start align-items-cente p-5" (journays)="onFormSubmitted($event)" />
+
+@defer (when journays.length > 0) {
+  <app-result-dcx class="flex justify-content-start align-items-cente p-5 self-content-start"  [journays]="journays" />
+  }
